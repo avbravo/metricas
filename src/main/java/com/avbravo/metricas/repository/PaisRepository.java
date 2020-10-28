@@ -17,7 +17,7 @@ import javax.ejb.Stateless;
 public class PaisRepository extends Repository<Pais>{
 
     public PaisRepository() {
-        super(Pais.class, "general","pais");
+        super(Pais.class, "jconfperu","pais");
     }
     
 }

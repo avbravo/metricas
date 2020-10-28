@@ -5,7 +5,10 @@
  */
 package com.avbravo.metricas.entity;
 
+import com.avbravo.jmoordb.anotations.Embedded;
 import com.avbravo.jmoordb.anotations.Id;
+import com.avbravo.jmoordb.pojos.UserInfo;
+import java.util.List;
 
 /**
  *
@@ -15,10 +18,20 @@ public class Pais {
    @Id
    private String id;
    private String pais;
+@Embedded
+    List<UserInfo> userInfo;
+
 
     public Pais() {
     }
+    public List<UserInfo> getUserInfo() {
+        return userInfo;
+    }
 
+    public void setUserInfo(List<UserInfo> userInfo) {
+        this.userInfo = userInfo;
+    }
+ 
     public Pais(String id, String pais) {
         this.id = id;
         this.pais = pais;
