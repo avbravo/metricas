@@ -1,14 +1,10 @@
 package com.avbravo.metricas;
 
 import com.avbravo.jmoordb.configuration.JmoordbConnection;
-import com.avbravo.jmoordb.util.JmoordbUtil;
 import java.util.Set;
-import javax.inject.Inject;
 import javax.security.enterprise.authentication.mechanism.http.BasicAuthenticationMechanismDefinition;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
-import org.eclipse.microprofile.config.Config;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 /**
  * Configures JAX-RS for the application.
