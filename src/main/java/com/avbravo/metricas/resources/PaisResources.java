@@ -72,6 +72,7 @@ public class PaisResources {
     @POST
     public Response create(Pais pais) {
         paisRepository.save(pais);
+        
         return Response.ok().build();
     }
 
@@ -85,7 +86,7 @@ public class PaisResources {
     // <editor-fold defaultstate="collapsed" desc="@Path("/findall")">
     @GET
     @Path("/findall")
-    @RolesAllowed({"admin"})
+//    @RolesAllowed({"admin"})
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Timed(name = "findAllPais",
             description = "Monitor the time find All Method takes",

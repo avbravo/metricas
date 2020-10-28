@@ -1,10 +1,14 @@
 package com.avbravo.metricas;
 
 import com.avbravo.jmoordb.configuration.JmoordbConnection;
+import com.avbravo.jmoordb.util.JmoordbUtil;
 import java.util.Set;
+import javax.inject.Inject;
 import javax.security.enterprise.authentication.mechanism.http.BasicAuthenticationMechanismDefinition;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
+import org.eclipse.microprofile.config.Config;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 /**
  * Configures JAX-RS for the application.
@@ -12,11 +16,24 @@ import javax.ws.rs.core.Application;
  */
 @ApplicationPath("resources")
 @BasicAuthenticationMechanismDefinition(realmName = "admin-realm")
+
 public class JAXRSConfiguration extends Application {
+//    @Inject
+//    private Config config;
+//    @Inject
+//    @ConfigProperty(name="mongodbsrv", defaultValue="")
+//    private String mongodbsrv;
+    
+    
    @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new java.util.HashSet<>();
         try {
+            //Configuracion de la base de datos
+//            JmoordbConnection jmc = new JmoordbConnection.Builder()
+//                    .withUri(mongodbsrv)
+//                    .build();
+           
             JmoordbConnection jmc = new JmoordbConnection.Builder()
                     .withSecurity(false)
                     .withDatabase("general")

@@ -15,9 +15,19 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <jakartaee>8.0</jakartaee>
         <version.payara>5.201</version.payara>
+              <microprofile.version>3.0</microprofile.version>
     </properties>
     
     <dependencies>
+        
+<!--          <dependency>
+            <groupId>org.eclipse.microprofile</groupId>
+            <artifactId>microprofile</artifactId>
+            <version>${microprofile.version}</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>-->
+        
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>javax.faces</artifactId>
@@ -52,7 +62,7 @@
         <dependency>
             <groupId>com.github.avbravo</groupId>
             <artifactId>jmoordb</artifactId>
-            <version>0.72</version>
+            <version>1.0</version>
         </dependency>
         
         
